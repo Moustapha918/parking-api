@@ -22,7 +22,7 @@ public class BillController {
             if(verifyParkingInput(parkingInput))
                 return  ResponseEntity.ok(billService.printBill(parkingInput));
 
-            return ResponseEntity.badRequest().body("Format de donée invalide");
+            return ResponseEntity.badRequest().body("invalid input");
     }
 
     private boolean verifyParkingInput(ParkingInput input){
